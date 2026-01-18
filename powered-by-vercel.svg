@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="212" height="44" viewBox="0 0 212 44" fill="none">
+<rect width="212" height="44" rx="8" fill="black"/>
+<text x="52" y="28" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="500" fill="white">Deployed on</text>
+<text x="140" y="28" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="white">Vercel</text>
+<path d="M23.3248 13L32.6497 29H14L23.3248 13Z" fill="white"/>
+<line x1="43.5" y1="0" x2="43.5" y2="44" stroke="#5E5E5E"/>
+</svg>

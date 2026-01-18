@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitHub Readme Stats Preview</title>
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Generate beautiful GitHub readme stats cards for your profile. Create customizable stats, streak, and language cards.">
+  <meta name="keywords" content="github stats, github readme stats, markdown generator, github profile stats, stats cards, github streak, programming languages, developer tools, open source,stats generator, github stats api, github stats generator, readme stats, github profile, github readme, github streak card, github languages card, fast github stats">
+  <meta name="author" content="mohitkumhar">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="GitHub Readme Stats Generator">
+  <meta property="og:description" content="Generate beautiful GitHub readme stats cards for your profile">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://github-readme-stats-fast.vercel.app">
+  <meta name="google-site-verification" content="9c9WJrB6k1_0JHlUx3V8JNS7B5t4OGt8asr9IeJZhkM" />
+  <link rel="apple-touch-icon" sizes="57x57" href="icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-icon-180x180.png">
+  
+  <!-- Android Icons -->
+  <link rel="icon" type="image/png" sizes="192x192" href="icons/android-icon-192x192.png">
+  
+  <!-- Favicon Icons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+  
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="manifest.json">
+  
+  <!-- Microsoft Tile -->
+  <meta name="msapplication-TileColor" content="#161b22">
+  <meta name="msapplication-TileImage" content="icons/ms-icon-144x144.png">
+  
+  <!-- Theme Color -->
+  <meta name="theme-color" content="#161b22">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="header">
+    <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" />
+    <h1>GitHub Readme Stats Preview</h1>
+  </div>
+  
+  <div class="container">
+    <div class="sidebar">
+      <h2>📊 Core Cards</h2>
+      <div class="tab active" data-type="core">
+        <span>📊</span>
+        <span>Stats + Streak + Languages</span>
+      </div>
+      <div class="tab" data-type="streak">
+        <span>🔥</span>
+        <span>Streak Card</span>
+      </div>
+      
+      <h2>🔧 Other Cards</h2>
+      <div class="tab" data-type="wakatime">
+        <span>⏱️</span>
+        <span>WakaTime</span>
+      </div>
+      <div class="tab" data-type="repo">
+        <span>📦</span>
+        <span>Repository Pin</span>
+      </div>
+      <div class="tab" data-type="gist">
+        <span>📝</span>
+        <span>Gist Pin</span>
+      </div>
+    </div>
+    
+    <div class="main">
+      <div class="options">
+        <!-- Core Cards Fields (Stats + Streak + Languages) -->
+        <div class="form-group" id="github-group">
+          <label for="github-username">
+            <span>👤</span>
+            GitHub Username
+          </label>
+          <input type="text" id="github-username" value="mohitkumhar" autocomplete="username" placeholder="Enter your GitHub username">
+        </div>
+        
+        <!-- WakaTime Fields -->
+        <div class="form-group" id="wakatime-group" style="display: none;">
+          <label for="wakatime-username">
+            <span>👤</span>
+            WakaTime Username
+          </label>
+          <input type="text" id="wakatime-username" value="mohitkumhar" placeholder="Enter your WakaTime username">
+        </div>
+        
+        <!-- Repository Pin Fields -->
+        <div class="form-group" id="repo-username-group" style="display: none;">
+          <label for="repo-username">
+            <span>👤</span>
+            GitHub Username
+          </label>
+          <input type="text" id="repo-username" value="mohitkumhar" placeholder="Enter GitHub username">
+        </div>
+        
+        <div class="form-group" id="repo-group" style="display: none;">
+          <label for="repo">
+            <span>📁</span>
+            Repository Name
+          </label>
+          <input type="text" id="repo" value="github-readme-stats-fast" placeholder="e.g. my-awesome-project">
+        </div>
+        
+        <!-- Gist Pin Fields -->
+        <div class="form-group" id="gist-group" style="display: none;">
+          <label for="gist-id">
+            <span>📝</span>
+            Gist ID
+          </label>
+          <input type="text" id="gist-id" value="bbfce31e0217a3689c8d961a356cb10d" placeholder="Enter gist ID">
+        </div>
+        
+        <!-- Theme (Common for all) -->
+        <div class="form-group">
+          <label for="theme">
+            <span>🎨</span>
+            Theme
+          </label>
+          <select id="theme">
+            <option value="">Default</option>
+            <option value="radical" selected>Radical</option>
+            <option value="dark">Dark</option>
+            <option value="tokyonight">Tokyo Night</option>
+            <option value="onedark">One Dark</option>
+            <option value="dracula">Dracula</option>
+            <option value="github_dark">GitHub Dark</option>
+            <option value="nord">Nord</option>
+            <option value="gruvbox">Gruvbox</option>
+          </select>
+        </div>
+      </div>
+      
+      <div class="preview" id="preview">
+        <div class="loading-overlay" id="loading-overlay">
+          <div class="spinner"></div>
+        </div>
+      </div>
+      
+      <div class="markdown">
+        <div class="markdown-header">
+          <h3>
+            <span>📋</span>
+            Generated Markdown
+          </h3>
+        </div>
+        <textarea id="markdown" readonly aria-label="Generated markdown code" placeholder="Your markdown code will appear here..."></textarea>
+        <div class="button-group">
+          <button class="btn-primary" onclick="copyCode()">
+            <span>📋</span>
+            Copy Markdown
+          </button>
+          <button class="btn-secondary" onclick="refreshPreview()">
+            <span>🔄</span>
+            Refresh Preview
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer">
+    Made with ❤️ by 
+    <a href="https://github.com/mohitkumhar/github-readme-stats-fast" target="_blank" rel="noopener">mohit S</a>
+    &nbsp;|&nbsp;
+    <a href="https://github.com/mohitkumhar/github-readme-stats-fast#readme" target="_blank" rel="noopener">Documentation</a>
+  </div>
+
+  <div class="success-toast" id="success-toast">
+    <span>✅</span>
+    <span>Markdown copied to clipboard!</span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
